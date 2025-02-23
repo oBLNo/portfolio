@@ -16,12 +16,20 @@
             <div class="logo">OMiD</div>
             <ul class="nav-links">
 
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Über mich</a></li>
                 <li><a href="#projects">Projekte</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
+        
         </div>
     </nav>
 
@@ -135,5 +143,25 @@
             <p>&copy; 2025 BL. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    });
+    </script>
 </body>
 </html> 

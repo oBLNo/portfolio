@@ -4,6 +4,7 @@
     --secondary-color: #1e40af;
     --text-color: #333;
     --light-bg: #f3f4f6;
+    --gradient-bg: linear-gradient(rgba(37,99,235,0.1), rgba(37,99,235,0.2));
 }
 
 * {
@@ -63,7 +64,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(37,99,235,0.1), rgba(37,99,235,0.2));
+    background: var(--gradient-bg);
     text-align: center;
 }
 
@@ -110,6 +111,10 @@ h2 {
 }
 
 /* Projects Grid */
+.projects {
+    background: var(--gradient-bg);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -144,6 +149,10 @@ h2 {
 }
 
 /* Contact Section */
+.contact {
+    background: linear-gradient(rgba(37,99,235,0.1), rgba(37,99,235,0.2));
+}
+
 .contact-info {
     display: flex;
     justify-content: center;
@@ -170,10 +179,63 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design */
+/* Neue Hamburger-Stile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive Design - Überarbeitet */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
     }
     
     .hero h1 {
