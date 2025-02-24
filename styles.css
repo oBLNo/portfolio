@@ -4,7 +4,7 @@
     --secondary-color: #1e40af;
     --text-color: #333;
     --light-bg: #f3f4f6;
-    --gradient-bg: linear-gradient(rgba(37,99,235,0.1), rgba(37,99,235,0.2));
+    --section-bg: rgba(37,99,235,0.2); 
 }
 
 * {
@@ -64,7 +64,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--gradient-bg);
+    background: var(--section-bg);
     text-align: center;
 }
 
@@ -112,7 +112,7 @@ h2 {
 
 /* Projects Grid */
 .projects {
-    background: var(--gradient-bg);
+    background: var(--section-bg);
 }
 
 .projects-grid {
@@ -150,7 +150,9 @@ h2 {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(rgba(37,99,235,0.1), rgba(37,99,235,0.2));
+    background: var(--section-bg);
+    position: relative;
+    z-index: 1;
 }
 
 .contact-info {
@@ -210,40 +212,37 @@ footer {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Responsive Design - Überarbeitet */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar .container {
+        position: relative;
+    }
+
     .hamburger {
         display: block;
+        z-index: 1001;
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        bottom: 0;
         background: white;
-        display: flex;
+        display: none;  /* Standardmäßig ausgeblendet auf mobilen Geräten */
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 2rem;
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s ease-in-out;
+        gap: 1rem;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .nav-links.active {
-        opacity: 1;
-        pointer-events: auto;
+        display: flex;  /* Wird nur angezeigt, wenn aktiv */
     }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
+}
+
+/* Stellen Sie sicher, dass die Hero und Contact Sections ihre Hintergrundfarbe behalten */
+.hero, .contact {
+    background: var(--section-bg);
 }
