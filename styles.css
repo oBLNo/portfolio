@@ -64,7 +64,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--section-bg);
+    background: var(--section-bg);    
     text-align: center;
 }
 
@@ -143,6 +143,7 @@ h2 {
     border-radius: 4px;
     transition: background 0.3s;
 }
+
 
 .btn:hover {
     background: var(--secondary-color);
@@ -240,9 +241,4 @@ footer {
     .nav-links.active {
         display: flex;  /* Wird nur angezeigt, wenn aktiv */
     }
-}
-
-/* Stellen Sie sicher, dass die Hero und Contact Sections ihre Hintergrundfarbe behalten */
-.hero, .contact {
-    background: var(--section-bg);
 }

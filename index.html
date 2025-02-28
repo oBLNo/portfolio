@@ -121,6 +121,7 @@
                 <!-- Weitere Projekt-Cards hier -->
             </div>
         </div>
+        
     </section>
 
     <!-- Contact Section -->
@@ -157,6 +158,13 @@
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        const emailLink = document.querySelector('.email-link');
+        emailLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.innerHTML = '<i class="fas fa-envelope"></i> omid.bln@pm.me';
+            this.removeEventListener('click', arguments.callee);
         });
     });
     </script>
