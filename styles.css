@@ -1,4 +1,3 @@
-/* Grundlegende Reset und Variablen */
 :root {
     --primary-color: #6B7A8F;
     --secondary-color: #1e40af;
@@ -231,7 +230,7 @@ footer {
         left: 0;
         right: 0;
         background: white;
-        display: none;  /* Standardmäßig ausgeblendet auf mobilen Geräten */
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
@@ -240,6 +239,6 @@ footer {
     }
 
     .nav-links.active {
-        display: flex;  /* Wird nur angezeigt, wenn aktiv */
+        display: flex;
     }
 }
