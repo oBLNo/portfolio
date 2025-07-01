@@ -1,10 +1,10 @@
 /* Grundlegende Reset und Variablen */
 :root {
-    --primary-color: #2563eb;
+    --primary-color: #6B7A8F;
     --secondary-color: #1e40af;
     --text-color: #333;
     --light-bg: #f3f4f6;
-    --section-bg: rgba(37,99,235,0.2); 
+    --section-bg: rgba(37,99,235,0.2);
 }
 
 * {
@@ -64,7 +64,7 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--section-bg);    
+    background: var(--section-bg);
     text-align: center;
 }
 
@@ -85,28 +85,29 @@ h2 {
 }
 
 /* Skills Grid */
-.skills-grid {
+.icons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     text-align: center;
 }
 
-.skill-item {
+.icon {
     padding: 2rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+
 }
 
-.skill-item:hover {
+.icon:hover {
     transform: translateY(-5px);
 }
 
-.skill-item i {
+.icon i {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: #6B7A8F;
     margin-bottom: 1rem;
 }
 
