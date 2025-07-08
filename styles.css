@@ -110,6 +110,10 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.icon:hover i {
+    color: var(--secondary-color);
+}
+
 /* Projects Grid */
 .projects {
     background: var(--section-bg);
@@ -129,6 +133,12 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+}
+
+.project-card p {
+    margin-top: 1rem;
+    flex-grow: 1;
 }
 
 .project-links {
@@ -246,4 +256,8 @@ footer {
     .nav-links.active {
         display: flex;
     }
+}
+
+.project-card:hover .project-links a {
+    background: var(--secondary-color);
 }
