@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMiD´s Portfolio</title>
+    <title>OMiD's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -199,7 +199,7 @@
         <h2>Kontakt</h2>
         <div class="contact-info">
             <a href="https://linkedin.com/in/omidbl" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:omid.bln@pm.me" target="_blank"><i class="fas fa-envelope"></i> omid.bln@pm.me</a>
+            <a href="mailto:omid.bln@pm.me" class="email-link" target="_blank"><i class="fas fa-envelope"></i> omid.bln@pm.me</a>
             <a href="https://github.com/oblno" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
         </div>
     </div>
@@ -230,11 +230,13 @@
         });
 
         const emailLink = document.querySelector('.email-link');
-        emailLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            this.innerHTML = '<i class="fas fa-envelope"></i> omid.bln@pm.me';
-            this.removeEventListener('click', arguments.callee);
-        });
+        if (emailLink) {
+            emailLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.innerHTML = '<i class="fas fa-envelope"></i> omid.bln@pm.me';
+                this.removeEventListener('click', arguments.callee);
+            });
+        }
     });
 </script>
 </body>
