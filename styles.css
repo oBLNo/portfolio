@@ -1,6 +1,6 @@
 :root {
     --primary-color: #6B7A8F;
-    --secondary-color: #1e40af;
+    --secondary-color: #d97706;
     --text-color: #333;
     --light-bg: #f3f4f6;
     --section-bg: rgba(37,99,235,0.2);
@@ -19,9 +19,23 @@ body {
 }
 
 .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.about{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+.skills{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+p {
+    font-size: 17px;
 }
 
 /* Navigation */
@@ -30,7 +44,6 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
-    top: 0;
     z-index: 1000;
 }
 
@@ -41,10 +54,15 @@ body {
     padding: 1rem 2rem;
 }
 
+.logo {
+    margin-right: auto;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -55,7 +73,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -106,7 +124,7 @@ h2 {
 
 .icon i {
     font-size: 3rem;
-    color: #6B7A8F;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -167,8 +185,6 @@ h2 {
 /* Contact Section */
 .contact {
     background: var(--section-bg);
-    position: relative;
-    z-index: 1;
 }
 
 .contact-info {
@@ -187,7 +203,7 @@ h2 {
 }
 
 .contact-info a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Footer */
@@ -204,7 +220,6 @@ footer {
     border: none;
     background: none;
     padding: 0.5rem;
-    z-index: 1001;
 }
 
 .hamburger span {
@@ -260,4 +275,8 @@ footer {
 
 .project-card:hover .project-links a {
     background: var(--secondary-color);
+}
+
+.project-card:hover h3 {
+    color: var(--secondary-color);
 }

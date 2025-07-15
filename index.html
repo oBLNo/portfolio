@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMiD's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+
     <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,15 +13,14 @@
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container">
-        <div class="logo">OMID BARGHLAMENO</div>
+        <div>OMID BARGHLAMENO</div>
 
-        <!-- Hamburger-Button außerhalb der nav-links -->
         <button class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <!--test git commit-->
+
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">Über mich</a></li>
@@ -35,94 +35,148 @@
 <section id="home" class="hero">
     <div class="container">
         <h1>Willkommen in meinem Portfolio</h1>
-        <p>Junior PHP-Entwickler | Laravel | Eloquent | Vue.js | Blade</p>
-    </div>
+        <p>Junior Fullstack Webentwickler | Fokus: PHP, Laravel, Vue.js & Blade</p>    </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
+<section id="about">
+    <div class="about">
         <h2>Über mich</h2>
         <p>
-            Ich bin Junior Fullstack-Entwickler mit Interesse an modernen Webtechnologien. Auch wenn mir die
-            Backend-Entwicklung mit Laravel viel Freude bereitet, habe ich mich in letzter Zeit gezielt mit
-            Frontend-Technologien wie Vue.js und Blade beschäftigt, mit dem Ziel, meine Kenntnisse im Fullstack-Bereich
-            zu erweitern und mich für beide Seiten der Webentwicklung fit zu machen.
+            Hi! Ich bin Omid, Junior Fullstack Webentwickler mit Fokus auf PHP und dem Laravel-Framework.
         </p>
         <br>
         <p>
-            Ich entwickle datenbankgestützte Webanwendungen, arbeite mit REST-APIs in Laravel und setze
-            benutzerfreundliche Frontends mit Blade und Vue.js um, mit dem Ziel, gut verständlichen und wartbaren Code
-            zu schreiben.
+            Ich habe eine zweijährige Umschulung zum Fachinformatiker für Anwendungsentwicklung gemacht, in der ich mir
+            ein solides Fundament rund um Programmierung, Datenbanken, Webentwicklung und Projektarbeit aufgebaut habe.
         </p>
         <br>
         <p>
-            Während meines siebenmonatigen Vollzeitpraktikums habe ich an einem umfangreichen internen Projekt
-            mitgearbeitet, bei dem ich bestehende Codebasen analysiert und Integrationstests geschrieben habe, um
-            gezielt Bugs aufzudecken und zu beheben. Es hat mich besonders gefreut, dass ich als Junior-Entwickler an
-            einem echten, ressourcenreichen Projekt mitwirken durfte, eine spannende Erfahrung, die mir gezeigt hat, wie
-            viel man in einem echten Projekt wirklich dazulernt, gerade was Teamarbeit, Code-Qualität und Testing
-            angeht.
-            <br><br>
-            Abschließend für mein IHK-Projekt habe ich eine bestehende interne Anwendung erweitert, die zur Wartung an
-            Druckmaschinen dient. Details dazu sind unter meinen Projekten zu finden.
+            Richtig in die Praxis ging es dann in meinem siebenmonatigen Praktikum: Dort war ich Teil eines
+            Entwicklerteams und habe sowohl im Backend als auch im Frontend programmiert. Im Backend schrieb ich PHP
+            Unit-Tests, um gezielt Bugs zu finden, den bestehenden Code besser zu verstehen und mich in die Codebasis
+            einzuarbeiten. Im Frontend entwickelte ich dynamische Interfaces
+            mit Vue.js und verband sie mit der API des Projekts.
+        </p>
+        <p>
+            Für mein IHK-Abschlussprojekt habe ich eine bestehende Anwendung zur Maschinenwartung erweitert. Mehr
+            Details dazu finden Sie im Abschnitt Meine Projekte weiter unten.
         </p>
         <br>
         <p>
-            Ich arbeite mich gerne in bestehende Systeme ein, schätze Teamarbeit und systematische Problemlösung.
+            Ich arbeite strukturiert: Ich plane zunächst den Ablauf, entwickle den Code mit PhpStorm und verwende Tools
+            wie Herd oder Warp zum Deployment oder zur Zusammenarbeit. Anschließend teste ich das Ergebnis. Besonders
+            gerne entwickle ich im Backend, baue APIs, arbeite mit Blade und Vue.js.
+            Ich konnte sowohl an bestehenden Systemen als auch an neuen Projekten mitwirken.
         </p>
+        <br>
         <p>
-            Dabei achte ich darauf, Funktionen und Komponenten so zu gestalten, dass sie leicht wiederverwendbar sind,
-            z.B. bei Vue-Komponenten oder Eloquent-Abfragen. Neue Erkenntnisse halte ich schriftlich fest, um sie
-            effizient erneut nutzen zu können.
+            Ich bin sehr motiviert, lerne schnell und arbeite aktiv daran, mich täglich zu verbessern. Feedback nehme
+            ich offen an.
+            Dabei habe ich Erfahrungen in größeren Unternehmen sowie in Startup-Umgebungen gesammelt, beide
+            Arbeitsweisen haben mir viel Spaß gemacht.
+        </p>
+        <br>
+        <p>
+            Ich bringe Neugier mit, arbeite gerne im Team und möchte mich aktiv einbringen. Wenn Sie einen Entwickler
+            suchen, der mit Herzblut lernt und anpackt, dann freue ich mich über eine Nachricht!
         </p>
     </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills">
-    <div class="container">
+    <div class="skills">
         <h2>Meine Skills</h2>
         <div class="icons-grid">
-            <div class="icon">
-                <i class="fab fa-php"></i>
-                <h3>PHP</h3>
+
+            <div class="icon-group">
+                <h3>Backend</h3>
+
+                <div class="icon">
+                    <i class="fab fa-php"></i>
+                    <h4>PHP</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-laravel"></i>
+                    <h4>Laravel / Eloquent</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h4>APIs / REST / JSON</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-vial"></i>
+                    <h4>PHPUnit (Unit Testing)</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-database"></i>
+                    <h4>MySQL</h4>
+                </div>
             </div>
 
-            <div class="icon">
-                <i class="fab fa-laravel"></i>
-                <h3>Laravel & Blade</h3>
+            <div class="icon-group">
+                <h3>Frontend</h3>
+
+                <div class="icon">
+                    <i class="fa-solid fa-file-code" ></i>
+                    <h4>Blade</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-html5"></i>
+                    <h4>HTML5</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-brands fa-js"></i>
+                    <h4>JavaScript</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-vuejs"></i>
+                    <h4>Vue.js</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <h4>Bootstrap & Tailwind</h4>
+                </div>
             </div>
 
-            <div class="icon">
-                <i class="fa-solid fa-database"></i>
-                <h3>MySQL & Eloquent</h3>
+            <div class="icon-group">
+                <h3>Tools & Workflow</h3>
+
+                <div class="icon">
+                    <i class="fa-solid fa-terminal"></i>
+                    <h4>PhpStorm</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-git"></i>
+                    <h4>Git</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fab fa-docker"></i>
+                    <h4>Docker</h4>
+                </div>
+
+                <div class="icon">
+                    <i class="fa-solid fa-rocket"></i>
+                    <h4>Herd & Warp (Deployment / Zusammenarbeit)</h4>
+                </div>
             </div>
 
-            <div class="icon">
-                <i class="fab fa-vuejs"></i>
-                <h3>Vue.js</h3>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-            </div>
-
-            <div class="icon">
-                <i class="fa-brands fa-bootstrap"></i>
-                <h3>Bootstrap & Tailwind</h3>
-            </div>
-
-            <div class="icon">
-                <i class="fa-brands fa-git"></i>
-                <h3>Git</h3>
-            </div>
         </div>
     </div>
 </section>
@@ -172,9 +226,12 @@
             <div class="project-card">
                 <h3>Erweiterung des Interface an den Druckmaschinen (IHK-Projekt)</h3>
                 <p>
-                    In meinem IHK-Abschlussprojekt erweiterte ich eine interne Webanwendung zur Wartung von Druckmaschinen.
-                    Ich entwickelte zwei dynamische Vue.js-Interfaces: eines für die Wartungsübersicht und eines für die Dokumentation direkt an der Maschine.
-                    Die Lösung basiert auf einer Laravel-API und erleichtert die Wartungsdokumentation sowie die Nachverfolgbarkeit im Intranet.
+                    In meinem IHK-Abschlussprojekt erweiterte ich eine interne Webanwendung zur Wartung von
+                    Druckmaschinen.
+                    Ich entwickelte zwei dynamische Vue.js-Interfaces: eines für die Wartungsübersicht und eines für die
+                    Dokumentation direkt an der Maschine.
+                    Die Lösung basiert auf einer Laravel-API und erleichtert die Wartungsdokumentation sowie die
+                    Nachverfolgbarkeit im Intranet.
                 </p>
             </div>
 
@@ -198,7 +255,8 @@
         <h2>Kontakt</h2>
         <div class="contact-info">
             <a href="https://linkedin.com/in/omidbl" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:omid.bln@pm.me" class="email-link" target="_blank"><i class="fas fa-envelope"></i> omid.bln@pm.me</a>
+            <a href="mailto:omid.bln@pm.me" class="email-link" target="_blank"><i class="fas fa-envelope"></i>
+                omid.bln@pm.me</a>
             <a href="https://github.com/oblno" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
         </div>
     </div>
@@ -206,7 +264,7 @@
 
 <footer>
     <div class="container">
-        <p>Danke für Deinen Besuch.</p>
+        <p>Vielen Dank für Ihren Besuch.</p>
     </div>
 </footer>
 
@@ -232,7 +290,6 @@
         if (emailLink) {
             emailLink.addEventListener('click', function (e) {
                 e.preventDefault();
-                this.innerHTML = '<i class="fas fa-envelope"></i> omid.bln@pm.me';
                 this.removeEventListener('click', arguments.callee);
             });
         }
