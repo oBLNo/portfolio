@@ -9,11 +9,13 @@
     <!-- Font Awesome für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 <!-- Navigation -->
-<nav class="navbar">
+<nav class="navbar" aria-label="Main Navigation">
     <div class="container">
-        <div>OMID BARGHLAMENO</div>
+
+        <div class="logo">OMID BARGHLAMENO</div>
 
         <button class="hamburger">
             <span></span>
@@ -28,19 +30,24 @@
             <li><a href="#projects">Projekte</a></li>
             <li><a href="#contact">Kontakt</a></li>
         </ul>
+
     </div>
 </nav>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="container">
+
         <h1>Willkommen in meinem Portfolio</h1>
-        <p>Junior Fullstack Webentwickler | Fokus: PHP, Laravel, Vue.js & Blade</p>    </div>
+        <p>Junior Fullstack Webentwickler | Fokus: PHP, Laravel, Vue.js & Blade</p>
+
+    </div>
 </section>
 
 <!-- About Section -->
 <section id="about">
     <div class="about">
+
         <h2>Über mich</h2>
         <p>
             Hi! Ich bin Omid, Junior Fullstack Webentwickler mit Fokus auf PHP und dem Laravel-Framework.
@@ -81,12 +88,14 @@
             Ich bringe Neugier mit, arbeite gerne im Team und möchte mich aktiv einbringen. Wenn Sie einen Entwickler
             suchen, der mit Herzblut lernt und anpackt, dann freue ich mich über eine Nachricht!
         </p>
+
     </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills">
     <div class="skills">
+
         <h2>Meine Skills</h2>
         <div class="icons-grid">
 
@@ -123,7 +132,7 @@
                 <h3>Frontend</h3>
 
                 <div class="icon">
-                    <i class="fa-solid fa-file-code" ></i>
+                    <i class="fa-solid fa-file-code"></i>
                     <h4>Blade</h4>
                 </div>
 
@@ -176,14 +185,15 @@
                     <h4>Herd & Warp (Deployment / Zusammenarbeit)</h4>
                 </div>
             </div>
-
         </div>
+
     </div>
 </section>
 
 <!-- Projects Section -->
 <section id="projects" class="projects">
     <div class="container">
+
         <h2>Meine Projekte</h2>
         <div class="projects-grid">
 
@@ -235,7 +245,6 @@
                 </p>
             </div>
 
-
             <div class="project-card">
                 <h3>Online-Shop</h3>
                 <p>
@@ -245,13 +254,14 @@
             </div>
 
         </div>
-    </div>
 
+    </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact">
     <div class="container">
+
         <h2>Kontakt</h2>
         <div class="contact-info">
             <a href="https://linkedin.com/in/omidbl" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -259,6 +269,7 @@
                 omid.bln@pm.me</a>
             <a href="https://github.com/oblno" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
         </div>
+
     </div>
 </section>
 
@@ -269,16 +280,20 @@
 </footer>
 
 <script>
+    // Wait until the DOM is fully loaded before running the script
     document.addEventListener('DOMContentLoaded', () => {
+        // Select relevant DOM elements
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         const navLinksItems = document.querySelectorAll('.nav-links a');
 
+        // Toggle mobile menu when hamburger icon is clicked
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
 
+        // Close the menu when a navigation link is clicked
         navLinksItems.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -286,13 +301,14 @@
             });
         });
 
-        const emailLink = document.querySelector('.email-link');
-        if (emailLink) {
-            emailLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                this.removeEventListener('click', arguments.callee);
-            });
-        }
+        // Close the menu if the user clicks outside of it
+        document.addEventListener('click', (event) => {
+            const isClickInside = hamburger.contains(event.target) || navLinks.contains(event.target);
+            if (!isClickInside) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
     });
 </script>
 </body>
