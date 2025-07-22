@@ -277,3 +277,6 @@ footer {
     background: var(--secondary-color);
 }
 
+.project-card:hover h3 {
+    color: var(--secondary-color);
+}
