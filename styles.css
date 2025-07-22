@@ -280,3 +280,9 @@ footer {
 .project-card:hover h3 {
     color: var(--secondary-color);
 }
+.icon-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
