@@ -18,6 +18,35 @@ body {
     color: var(--text-color);
 }
 
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.wave {
+    font-size: 40px;
+    display: inline-block;
+    animation: wave 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .container {
     margin: 0 auto;
     padding: 0 2rem;
@@ -83,6 +112,10 @@ p {
     align-items: center;
     background: var(--section-bg);
     text-align: center;
+}
+
+.hero p, #dynamic-text {
+    min-height: 2rem;
 }
 
 .hero h1 {

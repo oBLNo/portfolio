@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 <!-- Navigation -->
 <nav class="navbar" aria-label="Main Navigation">
     <div class="container">
@@ -37,11 +38,13 @@
 </nav>
 
 <!-- Hero Section -->
+
 <section id="home" class="hero">
     <div class="container">
 
+        <span class="wave">👋🏼</span>
         <h1>Willkommen in meinem Portfolio</h1>
-        <p>Junior Fullstack-Webentwickler | Fokus: PHP, Laravel, Vue.js & Blade</p>
+        <p><span id="dynamic-text"></span></p>
 
     </div>
 </section>
@@ -275,7 +278,12 @@
             <div class="project-card">
                 <h3>Parkhaus-Management</h3>
                 <p>
-                    Dieses Projekt ist eine Java-basierte Desktop-Anwendung mit grafischer Benutzeroberfläche zur Verwaltung eines Parkhauses. Beim Einfahren wird das Kennzeichen eines Fahrzeugs erfasst und mit einer Datenbank abgeglichen, um zu prüfen, ob es bereits registriert ist. Beim Ausfahren wird das Kennzeichen entfernt, sodass es nicht mehr als geparkt gilt. Zusätzlich wird die Parkdauer ermittelt und angezeigt. Die Anwendung bietet eine intuitive GUI und sorgt für eine effiziente Verwaltung der Parkvorgänge.
+                    Dieses Projekt ist eine Java-basierte Desktop-Anwendung mit grafischer Benutzeroberfläche zur
+                    Verwaltung eines Parkhauses. Beim Einfahren wird das Kennzeichen eines Fahrzeugs erfasst und mit
+                    einer Datenbank abgeglichen, um zu prüfen, ob es bereits registriert ist. Beim Ausfahren wird das
+                    Kennzeichen entfernt, sodass es nicht mehr als geparkt gilt. Zusätzlich wird die Parkdauer ermittelt
+                    und angezeigt. Die Anwendung bietet eine intuitive GUI und sorgt für eine effiziente Verwaltung der
+                    Parkvorgänge.
                 </p>
             </div>
         </div>
@@ -335,6 +343,51 @@
             }
         });
     });
+
+
+    const texts = [
+        "Junior Fullstack-Webentwickler",
+        "Fokus: PHP, Laravel, Vue.js & Blade",
+        "Motiviert & lernbereit",
+    ];
+
+    let currentTextIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    const typeSpeed = 70;
+    const deleteSpeed = 40;
+    const pause = 1000;
+
+    const dynamicTextElement = document.getElementById("dynamic-text");
+
+    function type() {
+        const currentText = texts[currentTextIndex];
+
+        if (!isDeleting) {
+            dynamicTextElement.textContent = currentText.slice(0, currentCharIndex + 1);
+            currentCharIndex++;
+
+            if (currentCharIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, pause);
+                return;
+            }
+        } else {
+            dynamicTextElement.textContent = currentText.slice(0, currentCharIndex - 1);
+            currentCharIndex--;
+
+            if (currentCharIndex === 0) {
+                isDeleting = false;
+                currentTextIndex = (currentTextIndex + 1) % texts.length;
+            }
+        }
+        setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        type();
+    });
+
 </script>
 </body>
 </html>
