@@ -244,9 +244,10 @@ h2 {
     transition: transform 0.3s;
 }
 
-.contact-info a:hover {
-    color: var(--secondary-color);
+.contact-info a:hover i {
     transform: translateY(-5px);
+    color: var(--secondary-color);
+    transition: transform 0.3s;
 }
 
 /* Footer */
