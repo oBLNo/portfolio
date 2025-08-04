@@ -4,6 +4,7 @@
     --text-color: #333;
     --light-bg: #f3f4f6;
     --section-bg: rgba(37,99,235,0.2);
+    --transparent: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -315,6 +316,7 @@ footer {
         gap: 1rem;
         padding: 1rem 0;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: var(--transparent);
     }
 
     .nav-links.active {
@@ -336,12 +338,11 @@ footer {
     margin-bottom: 4rem;
 }
 .link a {
-    text-decoration: none !important;  /* Entfernt Unterstreichung */
-    color: inherit !important;          /* Behält die aktuelle Farbe bei */
+    text-decoration: none !important;
+    color: inherit !important;
     cursor: pointer;
 }
 
-/* Optional: auch beim Hover und beim Fokus keine Änderung */
 .link a:hover,
 .link a:focus,
 .link a:active {
