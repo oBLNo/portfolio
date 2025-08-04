@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum & Datenschutz</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" aria-label="Main Navigation">
+    <div class="container">
+
+        <div class="logo">OMID BARGHLAMENO</div>
+
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">Über mich</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projekte</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Impressum & Datenschutz</h1>
+    </div>
+</section>
+
+<!-- About Section -->
+<div class="container legal-page">
+    <!-- Inhalt der rechtliches.html -->
+
+    <h3>Impressum</h3>
+    <p>Angaben gemäß § 5 TMG:</p>
+    <p>Omid Barghlameno<br>
+        Welserstraße 3<br>
+        87463 Dietmannsried<br>
+        Deutschland</p>
+    <br>
+    <h3>Kontakt</h3>
+    <p> E-Mail: omid.bln@pm.me</p>
+    <br>
+    <h3>Haftungsausschluss (Disclaimer)</h3>
+    <p>
+        Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und
+        Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.<br>
+        Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+        Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als Diensteanbieter jedoch nicht verpflichtet,
+        übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
+        rechtswidrige Tätigkeit hinweisen.<br>
+        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben
+        hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis
+        einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich
+        diese Inhalte umgehend entfernen.
+    </p>
+    <br>
+    <h3>Haftung für Links</h3>
+    <p>Diese Webseite enthält Links zu externen Webseiten, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich
+        für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten sind ausschließlich
+        deren Betreiber verantwortlich.
+        Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
+        Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+        Eine dauerhafte Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
+        zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.</p>
+    <br>
+    <h3>Datenschutz</h3>
+    <p>
+        Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website verwendet keine Cookies, keine Tracking-Tools
+        und sammelt keine personenbezogenen Daten.<br>
+        Sofern Sie Links zu externen Seiten wie GitHub oder LinkedIn besuchen, beachten Sie bitte, dass ich für die
+        Datenschutzpraktiken dieser Seiten nicht verantwortlich bin. Bitte lesen Sie dort die jeweiligen
+        Datenschutzerklärungen.<br>
+        Wenn Sie Kontakt mit mir aufnehmen, z.B. per E-Mail, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer
+        Anfrage verwendet und nicht an Dritte weitergegeben.
+    </p>
+    <br>
+    <p><em>Stand: August 2025</em></p>
+</div>
+
+<script>
+    // Wait until the DOM is fully loaded before running the script
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select relevant DOM elements
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navLinksItems = document.querySelectorAll('.nav-links a');
+
+        // Toggle mobile menu when hamburger icon is clicked
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close the menu when a navigation link is clicked
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close the menu if the user clicks outside of it
+        document.addEventListener('click', (event) => {
+            const isClickInside = hamburger.contains(event.target) || navLinks.contains(event.target);
+            if (!isClickInside) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
