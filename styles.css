@@ -355,3 +355,16 @@ footer {
     padding: 2rem;
     background: var(--light-bg);
 }
+a.portfolio-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+a.portfolio-link:hover,
+a.portfolio-link:focus {
+    border-bottom-color: var(--secondary-color);
+    outline: none;
+}
